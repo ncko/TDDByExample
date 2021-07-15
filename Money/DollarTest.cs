@@ -7,12 +7,13 @@ namespace Money
         [Fact]
         public void TestTimes()
         {
-            const int expected = 10;
-            
             Dollar five = new Dollar(5);
-            five.Times(2);
-            int actual = five.Amount;
-            Assert.Equal(expected, actual);
+            
+            Dollar product = five.Times(2);
+            Assert.Equal(10, product.Amount);
+
+            product = five.Times(3);
+            Assert.Equal(15, product.Amount);
         }
     }
 }
