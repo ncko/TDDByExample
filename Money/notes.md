@@ -1,3 +1,5 @@
+left off on Chapter 3, page 15
+
 ## Todo
 
 - $5 + 10 CHF = $10 if rate is 2:1
@@ -5,6 +7,8 @@
 - make "amount" private
 - ~~Dollar side effects?~~
 - Money rounding?
+- equals()
+- hashCode()
 
 ## Lessons
 - The problem is dependency (between the code and test). The sympton is duplication. Get rid of the duplication, and you get rid of the dependency and end up with more generalized code.
@@ -13,3 +17,13 @@
   - replacing constants with variables
 - First we'll solve the "that works" part of the problem. Then we'll solve the "clean code" part of the problem.
   - this is the opposite of architecture-driven development
+- Strategies for quickly getting to green
+  - fake it - return a constant and gradually replace constants with variables until you have the real code
+  - use obvious implementation - type in the real implementation
+  - triangulation - ...
+- Value Objects - using objects as values
+  - constraints
+    - the values of the instance variables never change once they have been set by the constructor
+  - implications
+    - all operations must return a new object
+    - Value Objects should implement equals() method

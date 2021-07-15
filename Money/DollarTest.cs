@@ -8,7 +8,7 @@ namespace Money
         public void TestTimes()
         {
             Dollar five = new Dollar(5);
-            
+
             Dollar product = five.Times(2);
             Assert.Equal(10, product.Amount);
 
