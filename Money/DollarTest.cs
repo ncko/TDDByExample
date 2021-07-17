@@ -8,12 +8,8 @@ namespace Money
         public void TestTimes()
         {
             Dollar five = new Dollar(5);
-
-            Dollar product = five.Times(2);
-            Assert.Equal(10, product.Amount);
-
-            product = five.Times(3);
-            Assert.Equal(15, product.Amount);
+            Assert.Equal(new Dollar(10), five.Times(2));
+            Assert.Equal(new Dollar(15), five.Times(3));
         }
 
         [Fact]
@@ -21,6 +17,12 @@ namespace Money
         {
             Assert.True(new Dollar(5).Equals(new Dollar(5)));
             Assert.False(new Dollar(5).Equals(new Dollar(6)));
+        }
+
+        [Fact]
+        public void TestToString()
+        {
+            Assert.Equal("$5", new Dollar(5).ToString());
         }
     }
 }

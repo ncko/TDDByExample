@@ -2,24 +2,38 @@ using System;
 
 namespace Money
 {
-    public class Dollar
+    public class Dollar : IEquatable<Dollar>
     {
-        public int Amount;
+        private readonly int _amount;
 
         public Dollar(int amount)
         {
-            Amount = amount;
+            _amount = amount;
         }
-
+        
         public Dollar Times(int multiplier)
         {
-            return new(Amount * multiplier);
+            return new(_amount * multiplier);
+        }
+
+        public bool Equals(Dollar other)
+        {
+            return other != null && _amount == other._amount;
+        }
+
+        public override int GetHashCode()
+        {
+            return _amount;
+        }
+
+        public override string ToString()
+        {
+            return $"${_amount}";
         }
 
         public override bool Equals(object obj)
         {
-            var dollar = (Dollar) obj;
-            return dollar != null && Amount == dollar.Amount;
+            return Equals(obj as Dollar);
         }
     }
 }
