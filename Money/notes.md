@@ -1,7 +1,6 @@
-left off on Chapter 3, page 15
+left off on page 27, Chapter 6
 
 ## Todo
-
 - $5 + 10 CHF = $10 if rate is 2:1
 - ~~$5 * 2 = $10~~
 - ~~make "amount" private~~
