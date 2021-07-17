@@ -15,5 +15,11 @@ namespace Money
         {
             return new(Amount * multiplier);
         }
+
+        public override bool Equals(object obj)
+        {
+            var dollar = (Dollar) obj;
+            return dollar != null && Amount == dollar.Amount;
+        }
     }
 }

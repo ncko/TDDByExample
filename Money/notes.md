@@ -7,7 +7,9 @@ left off on Chapter 3, page 15
 - make "amount" private
 - ~~Dollar side effects?~~
 - Money rounding?
-- equals()
+- ~~equals()~~
+- Equal null
+- Equal object
 - hashCode()
 
 ## Lessons
@@ -20,7 +22,8 @@ left off on Chapter 3, page 15
 - Strategies for quickly getting to green
   - fake it - return a constant and gradually replace constants with variables until you have the real code
   - use obvious implementation - type in the real implementation
-  - triangulation - ...
+  - triangulation - we only generalize code when we have 2 or more examples.
+    - when the design thoughts just aren't coming, triangulation provides a chance to think about the problem from a slightly different direction.
 - Value Objects - using objects as values
   - constraints
     - the values of the instance variables never change once they have been set by the constructor
